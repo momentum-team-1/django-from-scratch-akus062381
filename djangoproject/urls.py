@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
 
+#there will only be one url in my application, according to Clinton
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('registration.backends.default.urls')),
 ]
 
 if settings.DEBUG:
