@@ -16,11 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+from snippet import views as snippet_views
 
 #there will only be one url in my application, according to Clinton
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('registration.backends.default.urls')),
+    path('accounts/', include('registration.backends.simple.urls')),
+    path('new_snippet/', snippet_views.new_snippet, name='new_snippet'),
+    path('show_snippets/', snippet_views.show_snippets, name='show_snippets'),
+    path('homepage/', snippet_views.index, name='index'),
 ]
 
 if settings.DEBUG:
@@ -31,3 +35,5 @@ if settings.DEBUG:
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
+
+
