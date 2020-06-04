@@ -6,7 +6,7 @@
 <div>
     <form action="{% url 'new_snippet' %}" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ snip_form.as_p }}
         <div>
             <button type="submit">Add Code Snippet</button>
         </div>

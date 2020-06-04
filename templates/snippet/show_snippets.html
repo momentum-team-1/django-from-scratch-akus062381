@@ -2,7 +2,19 @@
 
 {% block content %}
 
-<div>
+<h1>Snippet Library</h1>
 
-</div>
+<p>
+    <a href="{% url 'new_snippet' %}">Add a snippet to your library</a>
+</p>
+
+<ul>
+    {% for snippet in snippets.all %}
+        <li><a href="{% url 'new_snippet' snippet_pk=snippet.pk %}">{{ snippet.title }}</a></li>
+    {% endfor %}
+</ul>
+
+
+
+
 {% endblock %}

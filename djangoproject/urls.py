@@ -18,13 +18,13 @@ from django.conf import settings
 from django.urls import include, path
 from snippet import views as snippet_views
 
-#there will only be one url in my application, according to Clinton
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
-    path('new_snippet/', snippet_views.new_snippet, name='new_snippet'),
-    path('show_snippets/', snippet_views.show_snippets, name='show_snippets'),
-    path('homepage/', snippet_views.index, name='index'),
+    path('snippets/new/', snippet_views.new_snippet, name='new_snippet'),
+    path('snippets/', snippet_views.show_snippets, name='show_snippets'),
+    path('', snippet_views.home, name='home'),
+    path('snippets/<int:snippet_pk>/', snippet_views.snippet_detail, name='snippet_detail'),
 ]
 
 if settings.DEBUG:
