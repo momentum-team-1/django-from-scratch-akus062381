@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Code Snippet Manager{% endblock %}</title>
-</head>
+{% extends "base.html" %}
 
-<body>
-    {% block content %}
-    <h1>Code Snippet Manager</h1>
-    <p></p>
-    {% endblock %}
-</body>
 
-</html>
+{% block content %}
+    <h1>Welcome to your Code Snippet Manager!</h1>
+   
+   
+    <div><a href="{% url 'show_snippets' %}">Snippet Library</a></div>
+{% endblock %}

@@ -7,12 +7,17 @@ Snippet Library - {{ snippet.title }}
 {% block content %}
 <h1>{{ snippet.title }}</h1>
 
-<ul>
-    {% for snippet in snippets %}
-        <li>{{ details }}</li>
-    {% endfor %}
-    <p>
-        <a href="{% url 'show_snippets' snippet_pk=snippet.pk %}">Return to Snippet Library</a>
-    </p>
-</ul>>
+<p>
+    <button type="submit"><a href="{% url 'edit_snippet' snippet_pk=snippet.pk %}">Edit snippet</a></button><br>
+    <button type="submit"><a href="{% url 'delete_snippet' snippet_pk=snippet.pk %}">Delete snippet</a></button>
+</p>
+
+<pre><code>{{ snippet.language }}</code></pre>
+<pre><code>{{ snippet.date_of_creation }}</code></pre>
+<pre><code>{{ snippet.code_text }}</code></pre>
+<pre><code>{{ snippet.usage_description }}</code></pre>
+<pre><code>{{ snippet.labels }}</code></pre>
+   
+<button><a href="{% url 'show_snippets' %}">Return to Snippet Library</a></button>
+
 {% endblock %}

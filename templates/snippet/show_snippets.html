@@ -5,12 +5,13 @@
 <h1>Snippet Library</h1>
 
 <p>
-    <a href="{% url 'new_snippet' %}">Add a snippet to your library</a>
+    <button><a href="{% url 'new_snippet' %}">Add a snippet to your library</a></button><br>
+    <button><a href="{% url 'home' %}">Go home</a></button>
 </p>
 
 <ul>
     {% for snippet in snippets.all %}
-        <li><a href="{% url 'new_snippet' snippet_pk=snippet.pk %}">{{ snippet.title }}</a></li>
+        <li><button><a href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.usage_description }}</a></button></li>
     {% endfor %}
 </ul>
 

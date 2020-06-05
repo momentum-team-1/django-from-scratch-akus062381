@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{% url 'delete_snippet' snippet_pk=snippet.pk %}" method="POST">
+    {% csrf_token %}
+    <p>Click to confirm deletion of {{ snippet.title }}:</p>
+    <p>
+        <button type="submit">Delete forever</a></button>
+        <button type="submit"><a href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">Cancel</a></button>
+    </p>
+</form>
+
+{% endblock %}

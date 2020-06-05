@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Add Snippet</h1>
-
+<div><button><a href="{% url 'show_snippets' %}">Back to Library</a></button></div>
 <div>
     <form action="{% url 'new_snippet' %}" method="POST">
         {% csrf_token %}

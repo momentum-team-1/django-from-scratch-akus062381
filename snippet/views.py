@@ -25,7 +25,7 @@ def home(request):
 
 @login_required
 def snippet_detail(request, snippet_pk):
-    snippet = get_object_or_404(request.user.snippet, pk=snippet_pk)
+    snippet = get_object_or_404(request.user.snippets, pk=snippet_pk)
     return render(request, "snippet/snippet_detail.html", {"snippet": snippet})
 
 @login_required
@@ -43,6 +43,32 @@ def new_snippet(request):
     return render(request, 'snippet/new_snippet.html', {
         'snip_form': form,
     })
+
+@login_required
+def edit_snippet(request, snippet_pk):
+    snippet = get_object_or_404(request.user.snippets, pk=snippet_pk)
+
+    if request.method == 'POST':
+        form = SnippetForm(instance=snippet, data=request.POST)
+        if form.is_valid():
+            snippet = form.save()
+            return redirect(to='snippet_detail', snippet_pk=snippet.pk)
+    else:
+        form = SnippetForm(instance=snippet)
+        
+    return render(request, 'snippet/edit_snippet.html', { 'snip_form': form, 'snippet': snippet,})
+
+@login_required
+def delete_snippet(request, snippet_pk):
+    snippet = get_object_or_404(request.user.snippets, pk=snippet_pk)
+
+    if request.method == 'POST':
+        snippet.delete()
+        return redirect(to='show_snippets')
+    
+    return render(request, 'snippet/delete_snippet.html', { 'snippet': snippet })
+
+
 
 
 
