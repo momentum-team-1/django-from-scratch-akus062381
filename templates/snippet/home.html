@@ -2,8 +2,19 @@
 
 
 {% block content %}
-    <h1>Welcome to your Code Snippet Manager!</h1>
-   
-   
-    <div><a href="{% url 'show_snippets' %}">Snippet Library</a></div>
+<div>
+    <div class="flex flex-column tc">
+        <h1>SnipBank</h1>
+        <h5>A Software Developer's Code Snippet Management Tool</h5>
+    </div>
+    <div class="flex justify-center">
+        <p class="outline w-25 pa3 mr2 tc">Build yourself a code database</p>
+        <p class="outline w-25 pa3 mr2 tc">Organize your code for future use</p>
+    </div>
+    <div class="flex justify-center">
+        <p class="outline w-25 pa3 mr2 tc">Increase your daily productivity</p>
+        <p class="outline w-25 pa3 mr2 tc">Improve time management</p>
+    </div>
+</div>
+
 {% endblock %}

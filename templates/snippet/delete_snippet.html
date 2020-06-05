@@ -6,8 +6,8 @@
     {% csrf_token %}
     <p>Click to confirm deletion of {{ snippet.title }}:</p>
     <p>
-        <button type="submit">Delete forever</a></button>
-        <button type="submit"><a href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">Cancel</a></button>
+        <button class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" type="submit">Delete forever</button>
+        <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">Cancel</a>
     </p>
 </form>
 

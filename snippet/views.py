@@ -1,3 +1,4 @@
+  
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Tag
@@ -36,7 +37,7 @@ def new_snippet(request):
             snip = form.save(commit=False)
             snip.user = request.user
             snip.save()
-            return redirect(to='show_snippets', snippet_pk=snippet.pk)
+            return redirect(to='show_snippets')
     else:
         form = SnippetForm()
     

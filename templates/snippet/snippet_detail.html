@@ -8,8 +8,8 @@ Snippet Library - {{ snippet.title }}
 <h1>{{ snippet.title }}</h1>
 
 <p>
-    <button type="submit"><a href="{% url 'edit_snippet' snippet_pk=snippet.pk %}">Edit snippet</a></button><br>
-    <button type="submit"><a href="{% url 'delete_snippet' snippet_pk=snippet.pk %}">Delete snippet</a></button>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'edit_snippet' snippet_pk=snippet.pk %}">Edit snippet</a>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'delete_snippet' snippet_pk=snippet.pk %}">Delete snippet</a>
 </p>
 
 <pre><code>{{ snippet.language }}</code></pre>
@@ -18,6 +18,6 @@ Snippet Library - {{ snippet.title }}
 <pre><code>{{ snippet.usage_description }}</code></pre>
 <pre><code>{{ snippet.labels }}</code></pre>
    
-<button><a href="{% url 'show_snippets' %}">Return to Snippet Library</a></button>
+<a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Return to Snippet Library</a>
 
 {% endblock %}

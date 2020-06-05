@@ -1,3 +1,4 @@
+  
 {% extends "base.html" %}
 
 {% block content %}
@@ -5,13 +6,13 @@
 <h1>Snippet Library</h1>
 
 <p>
-    <button><a href="{% url 'new_snippet' %}">Add a snippet to your library</a></button><br>
-    <button><a href="{% url 'home' %}">Go home</a></button>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'new_snippet' %}">Add a snippet to your library</a>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'home' %}">Go home</a>
 </p>
 
 <ul>
     {% for snippet in snippets.all %}
-        <li><button><a href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.usage_description }}</a></button></li>
+        <li><a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.usage_description }}</a></li>
     {% endfor %}
 </ul>
 
