@@ -1,4 +1,71 @@
 .general {
-    color: #137752;
-    background-color: #CDECFF;
+    color: whitesmoke;
+    background-color: #555555;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#oka {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    background-image: url("/static/notebook-5245448_960_720.jpg");
+    background-size: cover;
+    color: black;
+}
+
+#okb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    background-image: url("/static/hands-5216585_960_720.webp");
+    background-size: cover;
+    color: white;
+}
+
+#okc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    background-image: url("/static/phone-5190643_960_720.webp");
+    background-size: cover;
+    color: white;
+}
+
+#okd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    background-image: url("/static/movement-2953852_960_720.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.header {
+    font-size: 6vw;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.subheader {
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+
+#snip {
+    width: 90%;
+}
+
+ul {
+    list-style-type: none;
 }

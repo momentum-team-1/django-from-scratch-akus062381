@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Code Snippet Manager{% endblock %}</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-    <link href="{% static 'snippet.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'snippet.css' %}"/>
 
-<body>
+<body class="general">
     {% if user.is_authenticated %}
     <div>
-        Welcome back, {{ user.username }}!
-        <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'auth_logout' %}">Logout</a>
-        <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Snippet Library</a>
+        Welcome back, {{ user.first_name }}!
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'auth_logout' %}">Logout</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Snippet Library</a>
+        <a class="f6 link dim br4 ph4 pv2 mb2 dib white bg-light-purple" href="{% url 'home' %}">Home</a>
     </div>
     {% endif %}
     {% block content %}
     {% endblock %}
 
-<footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+<footer class="pv4 ph3 ph5-m ph6-l white">
     <small class="f6 db tc">© 2020 <b class="ttu">SnipBank Inc.</small>
     <div class="tc mt3">
-        <a href="/language/" title="Language" class="f6 dib ph2 link mid-gray dim">Language</a>
-        <a href="/terms/"    title="Terms" class="f6 dib ph2 link mid-gray dim">Terms of Use</a>
-        <a href="/privacy/"  title="Privacy" class="f6 dib ph2 link mid-gray dim">Privacy</a>
+        <p class="f6 dib ph2 link white dim">REMARKABLE</p>
+        <p class="f6 dib ph2 link white dim">HIGHLY USEFUL</p>
+        <p class="f6 dib ph2 link white dim">INNOVATIVE</p>
     </div>
 </footer>
 

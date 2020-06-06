@@ -3,16 +3,16 @@
 
 {% block content %}
 
-<h1>Snippet Library</h1>
+<h1 class="header">SnipBank</h1>
+<h3 class="subheader">Your Snippet Library</h3>
 
-<p>
-    <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'new_snippet' %}">Add a snippet to your library</a>
-    <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'home' %}">Go home</a>
+<p class="header">
+    <a class="f6 link dim br4 ph4 pv2 mb2 dib white bg-light-purple" href="{% url 'new_snippet' %}">Add a snippet to your library</a>
 </p>
 
-<ul>
+<ul class="flex flex-wrap justify-center">
     {% for snippet in snippets.all %}
-        <li><a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.usage_description }}</a></li>
+        <li><a class="w-80 pa3 mr2 f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" id="snip" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.usage_description }}</a></li>
     {% endfor %}
 </ul>
 
