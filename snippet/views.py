@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Tag
 from .models import Snippet
+from django.db.models import Q
 from .forms import SnippetForm
 from .forms import TagForm
 from users.models import User
@@ -83,7 +84,21 @@ def list_tags(request, tag_names):
     snippets = request.user.snippets.all()
     return render(request, 'snippet/list_tags.html', {'tags': tags, 'snippets': snippets})
 
+@login_required
+def search_snippets(request):
+    
+    query = request.GET.get('q')
 
+    if query is not None:
+        # change the below and add the piece to models.py
+        snippets = Snippet.objects.filter(Q(title__icontains=query))
+    else:
+        snippets = []
+
+    return render(request, "snippet/search_snippets.html", {
+        "snippets": snippets, 
+        "query": query
+    })
 
 
 
