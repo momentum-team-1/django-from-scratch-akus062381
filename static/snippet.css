@@ -1,5 +1,5 @@
 .general {
-    color: whitesmoke;
+    color: white;
     background-color: #555555;
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -62,10 +62,41 @@
     font-style: italic;
 }
 
-#snip {
-    width: 90%;
-}
-
 ul {
     list-style-type: none;
 }
+
+body {
+    margin: 50px;
+}
+
+.yellow {
+    color: lightgreen;
+    font-size: small;
+}
+
+.white {
+    color: lightgray;
+}
+
+.viewinfo {
+    padding: 10px;
+}
+
+.viewsnippet {
+    color: yellow;
+    font-size: small;
+    padding: 10px;
+}
+
+.listsnippet {
+    padding: 50px;
+    margin: 50px;
+}
+
+
+
+
+
+
+

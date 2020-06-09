@@ -10,9 +10,10 @@
     <a class="f6 link dim br4 ph4 pv2 mb2 dib white bg-light-purple" href="{% url 'new_snippet' %}">Add a snippet to your library</a>
 </p>
 
-<ul class="flex flex-wrap justify-center">
+
+<ul class="listsnippet">
     {% for snippet in snippets.all %}
-        <li><a class="w-80 pa3 mr2 f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" id="snip" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.usage_description }}</a></li>
+        <li><a class="w-100 pa3 mr2 f6 link dim br2 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.date_of_creation }}</a></li>
     {% endfor %}
 </ul>
 

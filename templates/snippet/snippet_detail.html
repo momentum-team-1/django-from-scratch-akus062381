@@ -5,21 +5,30 @@ Snippet Library - {{ snippet.title }}
 {% endblock %}
 
 {% block content %}
-<h1>{{ snippet.title }}</h1>
+<h4>Snippet Title:</h4>
+<h2>{{ snippet.title }}</h2>
+
+{% if snippet.tags.count > 0 %}
+<ul class='list p10'>
+    {% for tag in snippet.tags.all %}
+        <li class='dib mr2 pa2 bg-light-blue'><a class="black no-underline" href="{% url 'view_tag' tag_name=tag.tag %}">{{ tag }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div>
+    <div class="viewinfo">Coding Language: {{ snippet.language }}</div>
+    <div class="viewinfo">Date created: {{ snippet.date_of_creation }}</div>
+    <div class="viewinfo">Recommended Usage: {{ snippet.usage_description }}</div>
+    <div class="viewinfo">Snippet Text:</div>
+    <pre class="viewsnippet"><code>{{ snippet.code_text }}</code></pre>
+    
+</div>
 
 <p>
     <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'edit_snippet' snippet_pk=snippet.pk %}">Edit snippet</a>
     <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'delete_snippet' snippet_pk=snippet.pk %}">Delete snippet</a>
+    <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Return to Snippet Library</a>
 </p>
-
-<section>
-    <p>{{ snippet.language }}</p>
-    <p>{{ snippet.date_of_creation }}</p>
-    <pre><code>{{ snippet.code_text }}</code></p>
-    <p>{{ snippet.usage_description }}</p>
-    <p>{{ snippet.labels }}</p>
-</section>
-
-<a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Return to Snippet Library</a>
 
 {% endblock %}

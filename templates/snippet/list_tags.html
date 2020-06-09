@@ -1,0 +1,19 @@
+  
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h3 class="subheader">Your Tags</h3>
+
+
+<ul>
+    {% for tag in tags.snippets.all %}
+        <li>{{ tag }}</li>
+    {% endfor %}
+</ul>
+
+
+
+
+{% endblock %}
