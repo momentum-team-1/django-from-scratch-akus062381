@@ -37,6 +37,7 @@ def new_snippet(request):
             snip = form.save(commit=False)
             snip.user = request.user
             snip.save()
+            snip.set_tag_names(form.cleaned_data['tag_names'])
             return redirect(to='show_snippets')
     else:
         form = SnippetForm()
