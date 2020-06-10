@@ -28,7 +28,7 @@ urlpatterns = [
     path('snippets/<int:snippet_pk>/edit/', snippet_views.edit_snippet, name='edit_snippet'),
     path('snippets/<int:snippet_pk>/delete/', snippet_views.delete_snippet, name='delete_snippet'),
     path('tags/<str:tag_name>/', snippet_views.view_tag, name='view_tag'),
-    path('tags/tags_list/', snippet_views.list_tags, name='list_tags'),
+    path('snippets/list_tags/', snippet_views.list_tags, name='list_tags'),
     path('snippets/search/', snippet_views.search_snippets, name='search_snippets'),
 ]
 

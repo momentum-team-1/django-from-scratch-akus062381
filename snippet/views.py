@@ -79,10 +79,9 @@ def view_tag(request, tag_name):
     return render(request, 'snippet/tag_detail.html', {'tag': tag, 'snippets': snippets})
 
 @login_required
-def list_tags(request, tag_names):
-    tags = request.user.tags.all()
-    snippets = request.user.snippets.all()
-    return render(request, 'snippet/list_tags.html', {'tags': tags, 'snippets': snippets})
+def list_tags(request):
+    tags = Tag.objects.filter(snippets__user=request.user).distinct()
+    return render(request, 'snippet/list_tags.html', {'tags': tags})
 
 @login_required
 def search_snippets(request):
@@ -101,4 +100,4 @@ def search_snippets(request):
     })
 
 
-
+    # snippets = search_snippets_for_user(request.user, query)

@@ -7,11 +7,18 @@
 <h3 class="subheader">Your Tags</h3>
 
 
-<ul>
-    {% for tag in tags.snippets.all %}
-        <li>{{ tag }}</li>
+<ul class='cf pa4'>
+    {% for tag in tags %}
+        <li class='fl pa3 tc w-50 flex flex-wrap justify-center f10 link dim br2 ph3 mb2 dib white bg-light-blue'><a class="black no-underline" href="{% url 'view_tag' tag_name=tag.tag %}">{{ tag.tag }}</a></li>
     {% endfor %}
 </ul>
+
+
+<!-- <ul>
+    {% for tag in tags %}
+        <li>{{ tag.tag }}</li>
+    {% endfor %}
+</ul> -->
 
 
 

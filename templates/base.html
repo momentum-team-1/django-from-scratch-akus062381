@@ -13,9 +13,11 @@
     <div>
         Welcome back, {{ user.first_name }}!
         <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'auth_logout' %}">Logout</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'home' %}">Home</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'new_snippet' %}">Add new snippet</a>
         <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Snippet Library</a>
-        <a class="f6 link dim br4 ph4 pv2 mb2 dib white bg-light-purple" href="{% url 'home' %}">Home</a>
-        <a class="f6 link dim br4 ph4 pv2 mb2 dib white bg-light-purple" href="{% url 'search_snippets' %}">Search</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'search_snippets' %}">Search</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'list_tags' %}">Tags</a>
     </div>
     {% endif %}
     {% block content %}

@@ -11,9 +11,9 @@
 </p>
 
 
-<ul class="listsnippet">
+<ul class="cf pa4">
     {% for snippet in snippets.all %}
-        <li><a class="w-100 pa3 mr2 f6 link dim br2 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.date_of_creation }}</a></li>
+        <li><a class="pa2 fl tc w-50 f6 link br2 ph3 mb2 dib white bg-light-purple" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.date_of_creation }}</a></li>
     {% endfor %}
 </ul>
 

@@ -54,6 +54,9 @@ class Snippet(models.Model):
     def __str__(self):
         return self.title
         return self.language
+
+def search_snippets_for_user(user,query):
+    return user.snippets.filter(Q(title__icontains=query))
         
 
 
