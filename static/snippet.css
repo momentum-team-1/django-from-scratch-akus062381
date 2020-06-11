@@ -1,6 +1,6 @@
 .general {
-    color: white;
     background-color: #555555;
+    color: rgb(247, 238, 162);
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -23,7 +23,7 @@
     font-size: 4vw;
     background-image: url("/static/hands-5216585_960_720.webp");
     background-size: cover;
-    color: white;
+    color: lemonchiffon;
 }
 
 #okc {
@@ -34,7 +34,7 @@
     font-size: 4vw;
     background-image: url("/static/phone-5190643_960_720.webp");
     background-size: cover;
-    color: white;
+    color: lemonchiffon;
 }
 
 #okd {
@@ -45,13 +45,14 @@
     font-size: 4vw;
     background-image: url("/static/movement-2953852_960_720.jpg");
     background-size: cover;
-    color: white;
+    color: lemonchiffon;
 }
 
 .header {
     font-size: 6vw;
     display: flex;
     justify-content: center;
+    color: lemonchiffon
 }
 
 .subheader {
@@ -59,6 +60,7 @@
     display: flex;
     justify-content: center;
     font-style: italic;
+    color: lemonchiffon
 }
 
 ul {
@@ -69,22 +71,7 @@ body {
     margin: 50px;
 }
 
-.yellow {
-    color: lightgreen;
-    font-size: small;
-}
-
-.white {
-    color: lightgray;
-}
-
 .viewinfo {
-    padding: 10px;
-}
-
-.viewsnippet {
-    color: yellow;
-    font-size: small;
     padding: 10px;
 }
 

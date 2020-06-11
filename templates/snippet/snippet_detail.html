@@ -26,9 +26,9 @@ Snippet Library - {{ snippet.title }}
 </div>
 
 <p>
-    <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'edit_snippet' snippet_pk=snippet.pk %}">Edit snippet</a>
-    <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'delete_snippet' snippet_pk=snippet.pk %}">Delete snippet</a>
-    <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Return to Snippet Library</a>
+    <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'edit_snippet' snippet_pk=snippet.pk %}">Edit snippet</a>
+    <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'delete_snippet' snippet_pk=snippet.pk %}">Delete snippet</a>
+    <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'show_snippets' %}">Return to Snippet Library</a>
 </p>
 
 {% endblock %}

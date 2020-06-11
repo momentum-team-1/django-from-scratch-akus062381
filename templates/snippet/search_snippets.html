@@ -7,15 +7,15 @@
 <form action="{% url 'search_snippets' %}" method="GET">
     <input type="search" name="q" placeholder="Search a word in your snippet titles" class="pa2 w-100">
     <p>
-        <button class="f6 link dim br2 ph4 pv1 mb2 dib white bg-light-purple" type="submit">Find Snippet</button>
-        <button class="f6 link dim br2 ph4 pv1 mb2 dib white bg-light-purple" type="submit"><a class="no-underline white" href="{% url 'search_snippets' %}">Clear Search</a></button>
+        <button class="f6 link dim br2 ph4 pv1 mb2 dib light-yellow bg-light-purple" type="submit">Find Snippet</button>
+        <button class="f6 link dim br2 ph4 pv1 mb2 dib light-yellow bg-light-purple" type="submit"><a class="no-underline light-yellow" href="{% url 'search_snippets' %}">Clear Search</a></button>
     </p>
 </form>
 
 {% if snippets is not None %}
 <ul>
     {% for snippet in snippets %}
-        <li><button class="f6 link dim br2 ph4 pv1 mb2 dib white bg-light-purple"><a class="light-yellow no-underline" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }}</a></button></li>
+        <li><button class="f6 link dim br2 ph4 pv1 mb2 dib light-yellow bg-light-purple"><a class="light-yellow no-underline" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }}</a></button></li>
     {% endfor %}
 </ul>
 {% endif %}

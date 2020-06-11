@@ -2,13 +2,13 @@
 
 {% block content %}
 <h1>Add Snippet</h1>
-<div><a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Back to Library</a></div>
+<div><a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'show_snippets' %}">Back to Library</a></div>
 <div>
     <form class="form-style" action="{% url 'new_snippet' %}" method="POST">
         {% csrf_token %}
         {{ snip_form.as_p }}
         <div>
-            <button class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" type="submit">Add Code Snippet</button>
+            <button class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" type="submit">Add Code Snippet</button>
         </div>
     </form>
 </div>

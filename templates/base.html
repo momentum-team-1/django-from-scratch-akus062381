@@ -16,31 +16,31 @@
     {% if user.is_authenticated %}
     <div>
         Welcome back, {{ user.first_name }}!
-        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'auth_logout' %}">Logout</a>
-        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'home' %}">Home</a>
-        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'new_snippet' %}">Add new snippet</a>
-        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'show_snippets' %}">Snippet Library</a>
-        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'search_snippets' %}">Search</a>
-        <a class="f6 link dim br4 ph3 pv2 mb2 dib white bg-light-purple" href="{% url 'list_tags' %}">Tags</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'auth_logout' %}">Logout</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'home' %}">Home</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'new_snippet' %}">Add new snippet</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'show_snippets' %}">Snippet Library</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'search_snippets' %}">Search</a>
+        <a class="f6 link dim br4 ph3 pv2 mb2 dib light-yellow bg-light-purple" href="{% url 'list_tags' %}">Tags</a>
     </div>
     {% endif %}
     {% block content %}
     {% endblock %}
 
 
-<div class="flex flex-column tc">
-    <h1 class="header">SnipBank</h1>
-    <h4>A Software Developer's Code Snippet Management Tool</h4>
-</div>
-
-
     
-<footer class="pv4 ph3 ph5-m ph6-l white">
+<footer class="pv4 ph3 ph5-m ph6-l washed-yellow">
+
+    <div class="flex flex-column tc">
+        <h1 class="mb1 washed-yellow">SnipBank</h1>
+        <h4 class="washed-yellow">A Software Developer's Code Snippet Management Tool</h4>
+    </div>
+
     <small class="f6 db tc">© 2020 <b class="ttu">SnipBank Inc.</small>
     <div class="tc mt3">
-        <p class="f6 dib ph2 link white dim">REMARKABLE</p>
-        <p class="f6 dib ph2 link white dim">HIGHLY USEFUL</p>
-        <p class="f6 dib ph2 link white dim">INNOVATIVE</p>
+        <p class="f6 dib ph2 link washed-yellow dim">REMARKABLE</p>
+        <p class="f6 dib ph2 link washed-yellow dim">HIGHLY USEFUL</p>
+        <p class="f6 dib ph2 link washed-yellow dim">INNOVATIVE</p>
     </div> 
 </footer>
     
