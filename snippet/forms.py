@@ -8,9 +8,9 @@ class SnippetForm(forms.ModelForm):
     class Meta:
         model = Snippet
         fields = [
+            'language',
             'title',
             'usage_description',
-            'language',
             'code_text',
             'tag_names',
         ]

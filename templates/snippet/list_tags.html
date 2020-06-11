@@ -7,9 +7,9 @@
 <h3 class="subheader">Your Tags</h3>
 
 
-<ul class='cf pa4'>
+<ul class='cf flex flex-wrap'>
     {% for tag in tags %}
-        <li class='fl pa3 tc w-50 flex flex-wrap justify-center f10 link dim br2 ph3 mb2 dib white bg-light-blue'><a class="black no-underline" href="{% url 'view_tag' tag_name=tag.tag %}">{{ tag.tag }}</a></li>
+        <li class='w-25 ph4'><a class="pa3 w-100 fl tc f5 link br2 ph3 mb2 black bg-light-blue underline-hover" href="{% url 'view_tag' tag_name=tag.tag %}">{{ tag.tag }}</a></li>
     {% endfor %}
 </ul>
 

@@ -18,7 +18,7 @@ class Tag(models.Model):
 
 class Snippet(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name="snippets")
-    language = models.CharField(max_length=255, choices=LANGUAGE_CHOICES, default='PYTHON')
+    language = models.CharField(max_length=255, choices=LANGUAGE_CHOICES, default='')
     title = models.CharField(max_length=255, blank=True, null=True)
     date_of_creation = models.DateField(auto_now_add=True)
     usage_description = models.CharField(max_length=255)
