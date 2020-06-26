@@ -1,0 +1,21 @@
+  
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<p class="header">
+    <a class="f6 link br2 ph2 pv2 dib black bg-light-yellow underline-hover" href="{% url 'new_snippet' %}">Add a snippet to your library</a>
+</p>
+
+
+<ul class="cf pa1 flex flex-wrap">
+    {% for snippet in snippets.all %}
+        <li class="w-25 pa1 ph3"><a class="pa2 w-100 fl tc f6 link br2 ph3 mb2 light-yellow bg-light-purple underline-hover" href="{% url 'snippet_detail' snippet_pk=snippet.pk %}">{{ snippet.title }} <br> {{ snippet.date_of_creation }}</a></li>
+    {% endfor %}
+</ul>
+
+
+
+
+{% endblock %}

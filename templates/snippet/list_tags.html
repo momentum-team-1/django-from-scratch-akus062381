@@ -1,0 +1,26 @@
+  
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h3 class="subheader">Your Tags</h3>
+
+
+<ul class='cf flex flex-wrap'>
+    {% for tag in tags %}
+        <li class='w-20 ph4'><a class="pa3 w-100 fl tc f5 link br3 ph3 mb2 black bg-washed-green outline underline-hover" href="{% url 'view_tag' tag_name=tag.tag %}">{{ tag.tag }}</a></li>
+    {% endfor %}
+</ul>
+
+
+<!-- <ul>
+    {% for tag in tags %}
+        <li>{{ tag.tag }}</li>
+    {% endfor %}
+</ul> -->
+
+
+
+
+{% endblock %}
